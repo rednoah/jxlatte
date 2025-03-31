@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<project name="jxlatte" default="jar">
+
+	<target name="compile">
+		<mkdir dir="bin" />
+		<javac release="11" srcdir="java" destdir="bin" includeAntRuntime="false" />
+	</target>
+
+	<target name="jar" depends="compile">
+		<mkdir dir="dist" />
+		<jar destfile="dist/jxlatte.jar">
+			<fileset dir="bin" />
+			<fileset dir="java/resources" />
+		</jar>
+	</target>
+
+	<target name="clean">
+		<delete dir="bin" />
+		<delete dir="dist" />
+	</target>
+
+</project>

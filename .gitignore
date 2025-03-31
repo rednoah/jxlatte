@@ -1,6 +1,6 @@
 # build directory
 build/
-builddir/
+dist/
 
 # output.png
 output.png
